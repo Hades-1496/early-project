@@ -1,0 +1,98 @@
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  max-width: 1200px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+h2 {
+  font-size: 50px;
+}
+h1 {
+  font-size: 60px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 24px;
+}
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+object[type="image/svg+xml"] {
+  height: 50px;
+  width: 100px;
+  transition: ease 0.2s;
+}
+/* ---- Cabecera ---- */
+header {
+  align-items: center;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 17px;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+header a {
+  padding: 10px 20px;
+  margin-right: 20px;
+  background-color: #072ac8;
+
+  color: #fff;
+}
+header li {
+  padding: 0 10%;
+}
+
+/* ---- Héroe ---- */
+
+footer p {
+  font-size: 13px;
+  font-weight: 10px;
+}
+#projects section,
+#services section {
+  display: flex;
+  justify-content: space-evenly;
+}
+#projects article,
+#services article {
+  max-width: 30%;
+}
+#newsletter {
+  height: 400px;
+  text-align: center;
+  background-color: #ffc600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+footer {
+    padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+footer ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10%;
+  grid-template-rows: 1fr 1fr;
+}
+#projects img {
+  width: 100%;
+  height: 250px;
+}
