@@ -12,7 +12,7 @@ h4 {
   font-weight: bold;
 }
 h2 {
-  margin-left: 10%;
+  margin:0 10%;
   font-size: 50px;
 }
 h1 {
@@ -143,12 +143,13 @@ footer p {
 }
 #projects article,
 #services article {
-  margin: 20px 40px;
+  margin: 40px 0;
   min-width: 300px;
   background-color: #fff;
   max-width: 20%;
   box-shadow: -5px 10px 5px rgb(184, 180, 180);
 }
+
 #projects p,
 #projects h3,
 #services p,
@@ -185,7 +186,7 @@ footer p {
   width: 100%;
   height: 100%;
   display: grid;
-  gap: 25% 0;
+  row-gap: 25%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 100px);
   grid-template-areas:
@@ -230,6 +231,51 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#newsletter input {
+  max-width: 33%;
+  height: 3rem;
+}
+#newsletter button {
+  padding: 0 15px;
+  color: #FFF;
+  background-color: #072ac8;
+  height: 3rem;
+}
+input, textarea {
+  border: none;
+  background-color: #F2F4FC;
+}
+/* ---- contact section ---- */
+label {
+  display: block;
+  padding: 15px;
+  border: none;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+textarea, .complete-newsletter input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 15rem;
+}
+.complete-newsletter input {
+  height: 3rem;
+}
+.email-and-phone {
+  gap: 20px;
+  display: flex;
+}
+.email-and-phone > div {
+  flex: 1; /* Esto no lo entiendo*/
+}
+.complete-newsletter button {
+  margin-top: 3em;
+  width: 100%;
+  height: 3rem;
+  background: #072ac8;
+  color: #FFF;
+  align-items: center;
 }
 /* ---- footer ---- */
 footer {
@@ -367,13 +413,24 @@ footer ul {
     min-width: 300px;
   }
   #hero .text {
-    height: 400px;
+    height: 800px;
   }
   #logos ul {
+    margin-top: 30%;
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
+    .emoji {
+    width: 0;
+    opacity: 0;
+  }
+  .em1,
+.em2,
+.em3,
+.em4 {
+  transform: scale(0.35);
+}
 }
 @media (max-width: 1604px) and (min-width: 900px) {
   header {
@@ -389,19 +446,20 @@ footer ul {
     justify-content: space-evenly;
   }
   #hero {
-    margin-top: 5%;
+    margin: 0 5%;
     display: grid;
     justify-content: space-evenly;
     justify-items: center;
     gap: 10%;
     grid-template-columns: 1fr;
-
+    grid-template-rows: 1fr 1fr;
   }
   #hero section {
     min-width: 750px;
   }
   #hero-images {
     width: 90%;
+
   }
   #hero .text {
     min-width: 700px;
