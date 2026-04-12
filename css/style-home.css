@@ -34,37 +34,18 @@ object[type="image/svg+xml"] {
   width: 100px;
   transition: 0.3s ease;
 }
-@media (min-width: 1605px) {
-  /* ---- Cabecera ---- */
-  header {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 17px;
-  }
-  header nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-  }
-  /* --- Héroe --- */
-  #hero {
-  margin-top: 5%;
-  display: grid;
-  justify-content: space-evenly;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr;
-}
-}
 /* ---- Cabecera ---- */
 
-header a {
+.contact {
   padding: 10px 20px;
   margin-right: 20px;
   margin-top: 30px;
   background-color: #072ac8;
   color: #fff;
+}
+header nav a {
+  color: black;
+  font-weight: bold;
 }
 header li {
   padding: 0 10%;
@@ -88,24 +69,22 @@ header li {
   text-decoration: none;
 }
 #hero section {
-  min-width: 555px;
   width: 30vw;
 }
 #hero-images {
   display: inline-block;
   position: relative;
   max-width: 561px;
-  aspect-ratio: 561/626;
 }
 #dude {
-  width: 100%;
+  width: 90%;
 }
 #card-1 {
   padding: 0;
   margin: 0;
   top: -5%;
-  left: -30%;
-  width: 90%;
+  left: -15%;
+  width: 70%;
   position: absolute;
   transform: translate(-20%, -10%) scale(0.7);
 }
@@ -113,8 +92,8 @@ header li {
   padding: 0;
   margin: 0;
   top: 60%;
-  left: 85%;
-  width: 90%;
+  left: 75%;
+  width: 70%;
   position: absolute;
   transform: translate(-30%, -10%) scale(0.7);
 }
@@ -140,14 +119,32 @@ footer p {
   font-weight: 10px;
 }
 /* --- Projects and services --- */
+#project-content {
+  width: 100%;
+}
+#project-content img {
+  width: 100%;
+  object-fit: cover;
+}
+#project-content h1 {
+  font-size: 2rem;
+}
+#project-content div {
+  display: flex;
+  justify-content: space-between;
+}
 #projects,
 #services section {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-bottom: 10%;
+  align-items: left;
 }
 #projects article,
 #services article {
+  margin: 20px 40px;
+  min-width: 300px;
   background-color: #fff;
   max-width: 20%;
   box-shadow: -5px 10px 5px rgb(184, 180, 180);
@@ -213,9 +210,6 @@ footer p {
 .em4 {
   transform: scale(0.5);
 }
-.em1,
-.em3 {
-}
 .em1 {
   grid-area: a;
 }
@@ -254,10 +248,12 @@ footer ul {
   grid-template-rows: 1fr 1fr;
 }
 #projects img {
+  object-fit: cover;
   width: 100%;
   height: 250px;
 }
 @media (max-width: 480px) {
+  /* Cabecera */
   header {
     align-items: center;
     padding-top: 30px;
@@ -265,7 +261,6 @@ footer ul {
     flex-direction: column;
     justify-content: space-between;
     font-size: 17px;
-
   }
   header a {
     margin-top: 15px;
@@ -275,15 +270,29 @@ footer ul {
     height: 30px;
     margin-bottom: 30px;
     position: relative;
-    background: url('../hamburger-svgrepo-com.svg') no-repeat center;
+    background: url("../hamburger-svgrepo-com.svg") no-repeat center;
     background-size: 30px;
     transition: 0.3s ease;
+  }
+  header article {
+    margin-bottom: 20px;
+  }
+  header article.logo {
+    order: 1;
+  }
+  header article:last-child {
+    order: 2;
+    
+  }
+  header article:nth-child(2) {
+    order: 3;
   }
   header nav:hover {
     background: none;
     height: 200px;
   }
-  header nav:hover ul, header a {
+  header nav:hover ul,
+  header a {
     opacity: 1;
   }
   header nav ul {
@@ -300,11 +309,131 @@ footer ul {
     align-items: center;
     justify-content: space-evenly;
   }
-  #hero {
-  margin-top: 5%;
-  display: grid;
-  justify-content: space-evenly;
-  justify-items: center;
-  grid-template-columns: 1fr;
+ 
 }
+@media (max-width: 899px) {
+    /* Cabecera */
+  header {
+    align-items: center;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+  header a {
+    margin-top: 15px;
+  }
+  header nav {
+    width: 60px;
+    height: 30px;
+    margin-bottom: 90px;
+    background-size: 30px;
+    transition: 0.3s ease;
+  }
+  header article {
+    margin-bottom: 20px;
+  }
+  header article.logo {
+    order: 1;
+  }
+  header article:last-child {
+    order: 2;
+  }
+  header article:nth-child(2) {
+    order: 3;
+  }
+  header nav ul {
+    padding-left: 0;
+    margin-left: 0;
+    height: 200px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+ /* Héroe */
+  #hero {
+    margin-top: 5%;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 10%;
+  }
+  #hero section {
+    min-width: 300px;
+  }
+  #hero .text {
+    height: 400px;
+  }
+  #logos ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+@media (max-width: 1604px) and (min-width: 900px) {
+  header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  #hero {
+    margin-top: 5%;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    gap: 10%;
+    grid-template-columns: 1fr;
+
+  }
+  #hero section {
+    min-width: 750px;
+  }
+  #hero-images {
+    width: 90%;
+  }
+  #hero .text {
+    min-width: 700px;
+    height: 400px;
+
+  }
+}
+
+@media (min-width: 1605px) {
+  /* ---- Cabecera ---- */
+  header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  /* --- Héroe --- */
+  #hero {
+    margin-top: 5%;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    gap: 10%;
+    grid-template-columns: 1fr 1fr;
+  }
+  #hero section {
+    min-width: 555px;
+  }
 }

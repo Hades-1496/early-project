@@ -31,9 +31,13 @@ async function loadHomeProjects() {
     containerMainProject.innerHTML = "";
 
     containerMainProject.innerHTML = `
-        <img src="${mainProject.image}" alt="${mainProject.name}"
-        <h1>${mainProject.name}</h1>
-        <p id="completed_on">${mainProject.completed_on}</p>
+    <h1>${mainProject.name}</h1>
+    <div>
+    
+    <p>${mainProject.description}</p>
+    <p>${mainProject.completed_on}</p>
+    </div>
+    <img src="${mainProject.image}" alt="${mainProject.name}"
         <p id="description" style="font-weight: bold;">${mainProject.content}</p>`;
     const remainingProjects = projects
       .filter((p) => p.uuid !== projectId)
