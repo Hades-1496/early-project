@@ -140,7 +140,7 @@ footer p {
   font-weight: 10px;
 }
 /* --- Projects and services --- */
-#projects section,
+#projects,
 #services section {
   display: flex;
   justify-content: space-evenly;
