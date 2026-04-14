@@ -1,7 +1,9 @@
 const API_URL =
   "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects";
+const emailInput = document.getElementById('email-input');
+const btn = document.getElementById('btn-subscribe');
 
-// 3. Función para pintar los datos
+// Función para pintar los datos
 async function loadHomeProjects() {
   const response = await fetch(API_URL);
   const projects = await response.json();
@@ -54,5 +56,18 @@ async function loadHomeProjects() {
     });
   }
 }
+// Función para verificar el correo:
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
 
+  if (emailInput.checkValidity() && emailInput.value != "") {
+    console.log(`¡Perfecto! El correo ${emailInput.value} es un correo válido`);
+  } else if (!emailInput.checkValidity() && emailInput.value != ""){
+    console.log(`${emailInput.value} no es un correo válido. Inténtalo de nuevo.`);
+    emailInput.reportValidity();
+  } else {
+    console.log(`El campo está vacío. Inténtalo de nuevo.`);
+    emailInput.reportValidity();
+  }
+});
 window.addEventListener("load", loadHomeProjects);
