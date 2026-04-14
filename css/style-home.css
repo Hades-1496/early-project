@@ -143,11 +143,17 @@ footer p {
 }
 #projects article,
 #services article {
+  transition: 0.3s ease;
   margin: 40px 0;
   min-width: 300px;
   background-color: #fff;
   max-width: 20%;
   box-shadow: -5px 10px 5px rgb(184, 180, 180);
+}
+#projects article:hover,
+#services article:hover {
+  box-shadow: -10px 14px 2px rgb(184, 180, 180);
+  transform: scale(1.05);
 }
 
 #projects p,
