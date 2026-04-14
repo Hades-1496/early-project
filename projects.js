@@ -22,7 +22,7 @@ async function loadHomeProjects() {
               <img src="${project.image}" alt="${project.name}" />
               <h3>${project.name}</h3>
               <p>${project.description}</p>
-              <a href="project-detail.html?uuid=${project.uuid}">Learn more</a>
+              <a href="./project-detail.html?uuid=${project.uuid}">Learn more</a>
             </article>
         `;
     });
@@ -50,7 +50,7 @@ async function loadHomeProjects() {
               <img src="${project.image}" alt="${project.name}" />
               <h3>${project.name}</h3>
               <p>${project.description}</p>
-              <a href="./pages/project-detail.html?uuid=${project.uuid}">Learn more</a>
+              <a href="./project-detail.html?uuid=${project.uuid}">Learn more</a>
             </article>
         `;
     });
